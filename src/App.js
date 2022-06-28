@@ -10,12 +10,12 @@ import {
   chakra,
   Box,
   Link,
-  Avatar,
   FormControl,
   FormHelperText,
   InputRightElement
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
+import { UserFocus } from "phosphor-react"
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -35,12 +35,12 @@ const App = () => {
       alignItems="center"
     >
       <Stack
-        flexDir="column"
-        mb="2"
+        flexDirection="column"
+        margin-bottom="8px"
         justifyContent="center"
         alignItems="center"
       >
-        <Avatar bg="#E2E8F0" />
+        <UserFocus size={70} color="#f0f0f0" weight="light" />
         <Heading color="#E2E8F0">Bem Vindo</Heading>
         <Box minW={{ base: "90%", md: "468px" }}>
           <form>
@@ -70,13 +70,13 @@ const App = () => {
                     type={showPassword ? "text" : "password"}
                     placeholder="Insira sua Senha"
                   />
-                  <InputRightElement width="4.5rem">
-                    <Button h="40px" size="sm" onClick={handleShowClick}>
+                  <InputRightElement width="72px">
+                    <Button height="40px" size="sm" onClick={handleShowClick}>
                       {showPassword ? "Esconder" : "Mostrar"}
                     </Button>
                   </InputRightElement>
                 </InputGroup>
-                <FormHelperText textAlign="right">
+                <FormHelperText textAlign="right" color="white">
                   <Link>Esqueceu a Senha?</Link>
                 </FormHelperText>
               </FormControl>
